@@ -13,11 +13,12 @@ public class FileExporterApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FileExporterApplication.class, args);
-
+		String src = "/Users/krishna/Desktop/file_loc/CandidatesProfilesexcel.xlsx";
+		String dest = "/Users/krishna/Desktop/file_loc/newfile.xlsx";
 		ReadExcel re = new ReadExcel();
-		List<Employee> res = re.printFile();
+		List<Employee> res = re.printFile(src);
 		WriteExcel we = new WriteExcel();
-		we.createExcel(res);
+		we.createExcel(res, dest);
 	}
 
 }

@@ -14,11 +14,11 @@ import java.util.List;
 
 public class ReadExcel {
     List<Employee> ls = new LinkedList<>();
-        public List<Employee> printFile() {
+        public List<Employee> printFile(String location) {
 
             try
             {
-                FileInputStream file = new FileInputStream(new File("/Users/krishna/Desktop/file_loc/CandidatesProfilesexcel.xlsx"));
+                FileInputStream file = new FileInputStream(new File(location));
 
             XSSFWorkbook workbook = new XSSFWorkbook(file);
 

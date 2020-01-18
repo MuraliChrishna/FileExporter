@@ -12,7 +12,7 @@ import java.util.List;
 
 public class WriteExcel {
 
-        public void createExcel(List<Employee> list) {
+        public void createExcel(List<Employee> list, String dest) {
 
             XSSFWorkbook workbook = new XSSFWorkbook();
             XSSFSheet sheet = workbook.createSheet("Employee Data");
@@ -34,7 +34,7 @@ public class WriteExcel {
             }
             try
             {
-                FileOutputStream out = new FileOutputStream(new File("/Users/krishna/Desktop/file_loc/newfile.xlsx"));
+                FileOutputStream out = new FileOutputStream(new File(dest));
                 workbook.write(out);
                 out.close();
                 System.out.println("File saved successfully on file.");
